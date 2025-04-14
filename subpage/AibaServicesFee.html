@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AibaAlbum</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../stylesSubpage.css">
+    <link rel="stylesheet" href="../responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="../images/favicon.png">
+</head>
+
+<body>
+  <header>
+    <div class="header-width">
+      <a class="header-navigation" href="../AibaAlbumDesign.html"><img src="../images/logo.png" alt="AibaAlbumDesign"></a>
+        <nav>
+            <ul class="main-navigation">
+                <li><a href="../AibaAlbumDesign.html">&emsp;&emsp;ホーム&emsp;&emsp;</a></li><!--
+                --><li><a href="AibaPromotion.html">&nbsp;キャンペーン&nbsp;</a></li><!--
+                --><li><a href="AibaServicesFee.html">サービス・料金</a></li><!--
+                --><li><a href="AibaContact.html">&nbsp;お問い合わせ&nbsp;</a></li>
+            </ul>
+        </nav>
+        <a class="application-btn" href="application.html">お申込み</a>
+    </div>
+    <div class="responsive-right">
+        <div class="responsive-box">
+            <button type="button" class="menu-btn">
+                    MENU
+            </button>
+            <nav class="menu-btn-child">
+                <ul>
+                    <li><a class="child-nav" href="../AibaAlbumDesign.html">ホーム</a></li>
+                    <li><a class="child-nav" href="AibaPromotion.html">キャンペーン</a></li>
+                    <li><a class="child-nav" href="AibaServicesFee.html">サービス・料金</a></li>
+                    <li><a class="child-nav" href="AibaContact.html">お問い合わせ</a></li>
+                    <li><a class="button" href="application.html">お申込み</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+    <main>
+        <section id="services" class="services">
+            <div class="fee-visual">
+                <h1>写真やフィルムをデータ化<br>DVDにまとめてお届け</h1>
+            </div>
+          <div class="container">
+            <div class="fee-banner">
+              <a href="AibaPromotion.html"><img src="../images/salebanner.jpg" alt="バナー"></a>
+            </div>
+
+            <div class="fee-services">
+                <div class="fee-services-title">
+                    <h1>料金表</h1>
+                </div>
+  
+
+                <div class="inline-box">
+                  <div class="box clicked" onclick="showPricing(this, 'aiba')">
+                      <h2>Aibaプラン</h2>
+                      <div class="text-left"><p>平均でお急ぎプランの3割程お安くデータ化いただけます</p></div>
+                      <p>納期: 6ヶ月</p>
+                  </div>
+                  <div class="box" onclick="showPricing(this, 'urgent')">
+                      <h2>お急ぎプラン</h2>
+                      <div class="text-left"><p>料金は少し高くなりますが納期が大幅に短縮されます</p></div>
+                      <p>納期: 2ヶ月</p>
+                  </div>
+                </div>
+                <div id="pricingTable"></div>
+                <script>
+
+                // 初期段階でAibaプランの料金表を表示する関数
+                document.addEventListener("DOMContentLoaded", function() {
+                        var aibaBox = document.querySelector('.box.clicked');
+                        showPricing(aibaBox, 'aiba');
+                    });
+                  
+                function showPricing(element, plan) {
+
+                       // すべてのボックスのクリック状態をリセット
+                    var boxes = document.getElementsByClassName('box');
+                    for (var i = 0; i < boxes.length; i++) {
+                        boxes[i].classList.remove('clicked');
+                        }
+
+                      // クリックされたボックスの枠の色を変更
+                    element.classList.add('clicked');
+                    var pricingTable = document.getElementById('pricingTable');
+                    if (plan === 'aiba') {
+                        pricingTable.innerHTML = `
+                                
+                              <table>
+                                <caption>一般的な写真やフィルム</caption>
+                                <thead>
+                                  <tr>
+                                    <th>写真の種類</th>
+                                    <th></th>
+                                    <th>スタンダード</th>
+                                    <th>プレミアム</th>
+                                    <th>他社参考</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>アルバム</td>
+                                    <td>1冊 (200枚まで)</td>
+                                    <td>2,660円</td>
+                                    <td>3,990円</td>
+                                    <td>4,980円</td>
+                                  </tr>
+                                  <tr>
+                                    <td>ポケットアルバム</td>
+                                    <td>1冊 (50枚まで)</td>
+                                    <td>770円</td>
+                                    <td>1,190円</td>
+                                    <td>取扱なし</td>
+                                  </tr>
+                                  <tr>
+                                    <td>バラ写真</td>
+                                    <td>200枚ごとに</td>
+                                    <td>1,960円</td>
+                                    <td>2,940円</td>
+                                    <td>7,140円</td>
+                                  </tr>
+                                  <tr>
+                                    <td>35mmスリーブフィルム、<br>APSフィルム</td>
+                                    <td>1本</td>
+                                    <td>217円</td>
+                                    <td>322円</td>
+                                    <td>660円</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                              <table>
+                                <caption>特殊な写真やフィルム</caption>
+                                <thead>
+                                  <tr>
+                                    <th>写真の種類</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th>スタンダード</th>
+                                    <th>プレミアム</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>バラ写真（特殊サイズ）</td>
+                                    <td>1枚</td>
+                                    <td></td>
+                                    <td>56円</td>
+                                    <td>84円</td>
+                                  </tr>
+                                  <tr>
+                                    <td>35mmハーフフィルム</td>
+                                    <td>1コマ</td>
+                                    <td></td>
+                                    <td>434円</td>
+                                    <td>644円</td>
+                                  </tr>
+                                  <tr>
+                                    <td>35mmマウントフィルム</td>
+                                    <td>1コマ</td>
+                                    <td></td>
+                                    <td>35円</td>
+                                    <td>56円</td>
+                                  </tr>
+                                  <tr>
+                                    <td>ブローニーフィルム</td>
+                                    <td>1コマ</td>
+                                    <td></td>
+                                    <td>126円</td>
+                                    <td>189円</td>
+                                  </tr>
+                                  <tr>
+                                    <td>大判フィルム</td>
+                                    <td>1コマ</td>
+                                    <td></td>
+                                    <td>259円</td>
+                                    <td>385円</td>
+                                  </tr>
+                                  <tr>
+                                    <td>ポケットフィルム</td>
+                                    <td>1本</td>
+                                    <td></td>
+                                    <td>574円</td>
+                                    <td>868円</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                              <table>
+                                <caption>超過料金</caption>
+                                <thead>
+                                  <tr>
+                                    <th>写真の種類</th>
+                                    <th></th>
+                                    <th>スタンダード</th>
+                                    <th>プレミアム</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>アルバム</td>
+                                    <td>1冊超過100枚ごとに</td>
+                                    <td>+910円</td>
+                                    <td>+1,400円</td>
+                                  </tr>
+                                  <tr>
+                                    <td>ポケットアルバム</td>
+                                    <td>1冊 (50枚まで)</td>
+                                    <td>770円</td>
+                                    <td>1,190円</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="border-none">ポケットアルバム</td>
+                                    <td>1冊51枚〜200枚まで</td>
+                                    <td>+1,470円</td>
+                                    <td>+2,170円</td>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td>以降100枚ごとに</td>
+                                    <td>+980円</td>
+                                    <td>+1,470円</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                              <table>
+                                <caption>ビデオテープ</caption>
+                                <thead>
+                                  <tr>
+                                    <th>テープの種類</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th>料金</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td class="border-none">VHS / VHS-C / ベータ / mini-DV / Hi8</td>
+                                    <td class="border-none">1本120分まで</td>
+                                    <td>1〜4本</td>
+                                    <td></td>
+                                    <td>3,000円</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="border-none"></td>
+                                    <td class="border-none"></td>
+                                    <td>5〜9本</td>
+                                    <td></td>
+                                    <td>2,500円</td>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>10本以上</td>
+                                    <td></td>
+                                    <td>1,500円</td>
+                                  </tr>
+                                  <tr>
+                                    <td>8mmフィルム</td>
+                                    <td>10分ごとに</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>2,800円</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                            `;
+                        } else if (plan === 'urgent') {
+                            pricingTable.innerHTML = `
+                                
+                              <table>
+                                <caption>一般的な写真やフィルム</caption>
+                                <thead>
+                                  <tr>
+                                    <th>写真の種類</th>
+                                    <th></th>
+                                    <th>スタンダード</th>
+                                    <th>プレミアム</th>
+                                    <th>他社参考</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>アルバム</td>
+                                    <td>1冊 (200枚まで)</td>
+                                    <td>3,660円</td>
+                                    <td>4,990円</td>
+                                    <td>5,980円</td>
+                                  </tr>
+                                  <tr>
+                                    <td>ポケットアルバム</td>
+                                    <td>1冊 (50枚まで)</td>
+                                    <td>870円</td>
+                                    <td>2,190円</td>
+                                    <td>取扱なし</td>
+                                  </tr>
+                                  <tr>
+                                    <td>バラ写真</td>
+                                    <td>200枚ごとに</td>
+                                    <td>2,960円</td>
+                                    <td>3,940円</td>
+                                    <td>8,140円</td>
+                                  </tr>
+                                  <tr>
+                                    <td>35mmスリーブフィルム、<br>APSフィルム</td>
+                                    <td>1本</td>
+                                    <td>317円</td>
+                                    <td>422円</td>
+                                    <td>760円</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                              <table>
+                                <caption>特殊な写真やフィルム</caption>
+                                <thead>
+                                  <tr>
+                                    <th>写真の種類</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th>スタンダード</th>
+                                    <th>プレミアム</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>バラ写真（特殊サイズ）</td>
+                                    <td>1枚</td>
+                                    <td></td>
+                                    <td>66円</td>
+                                    <td>94円</td>
+                                  </tr>
+                                  <tr>
+                                    <td>35mmハーフフィルム</td>
+                                    <td>1コマ</td>
+                                    <td></td>
+                                    <td>534円</td>
+                                    <td>744円</td>
+                                  </tr>
+                                  <tr>
+                                    <td>35mmマウントフィルム</td>
+                                    <td>1コマ</td>
+                                    <td></td>
+                                    <td>45円</td>
+                                    <td>66円</td>
+                                  </tr>
+                                  <tr>
+                                    <td>ブローニーフィルム</td>
+                                    <td>1コマ</td>
+                                    <td></td>
+                                    <td>226円</td>
+                                    <td>289円</td>
+                                  </tr>
+                                  <tr>
+                                    <td>大判フィルム</td>
+                                    <td>1コマ</td>
+                                    <td></td>
+                                    <td>359円</td>
+                                    <td>485円</td>
+                                  </tr>
+                                  <tr>
+                                    <td>ポケットフィルム</td>
+                                    <td>1本</td>
+                                    <td></td>
+                                    <td>674円</td>
+                                    <td>968円</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                              <table>
+                                <caption>超過料金</caption>
+                                <thead>
+                                  <tr>
+                                    <th>写真の種類</th>
+                                    <th></th>
+                                    <th>スタンダード</th>
+                                    <th>プレミアム</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>アルバム</td>
+                                    <td>1冊超過100枚ごとに</td>
+                                    <td>+1,010円</td>
+                                    <td>+2,400円</td>
+                                  </tr>
+                                  <tr>
+                                    <td>ポケットアルバム</td>
+                                    <td>1冊 (50枚まで)</td>
+                                    <td>870円</td>
+                                    <td>2,190円</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="border-none">ポケットアルバム</td>
+                                    <td>1冊51枚〜200枚まで</td>
+                                    <td>+2,470円</td>
+                                    <td>+3,170円</td>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td>以降100枚ごとに</td>
+                                    <td>+1,080円</td>
+                                    <td>+2,470円</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                              <table>
+                                <caption>ビデオテープ</caption>
+                                <thead>
+                                  <tr>
+                                    <th>テープの種類</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th>料金</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td class="border-none">VHS / VHS-C / ベータ / mini-DV / Hi8</td>
+                                    <td class="border-none">1本120分まで</td>
+                                    <td>1〜4本</td>
+                                    <td></td>
+                                    <td>4,000円</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="border-none"></td>
+                                    <td class="border-none"></td>
+                                    <td>5〜9本</td>
+                                    <td></td>
+                                    <td>3,500円</td>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>10本以上</td>
+                                    <td></td>
+                                    <td>2,500円</td>
+                                  </tr>
+                                  <tr>
+                                    <td>8mmフィルム</td>
+                                    <td>10分ごとに</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3,800円</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                            `;
+                        }
+                    }
+              </script>
+
+            </div>
+          </div>
+        </section>
+    </main>
+    <footer>
+        <nav class="footer-main-nav">
+            <ul>
+                <li><a href="AibaContact.html">お問い合わせ</a></li>
+                <li><a href="CompanyOverview.html">会社概要</a></li>
+                <li><a href="TearmsOfUse.html">ご利用規約</a></li>
+                <li><a href="PrivacyPolicy.html">プライバシーポリシー</a></li>
+                <li><a href="SpecifiedCommercialTransactionAct.html">特定商取引法に基づく表示</a></li>
+            </ul>
+        </nav>
+        <nav class="footer-responsive-nav">
+          <ul>
+              <li><a href="AibaContact.html">お問い合わせ</a></li>
+              <li><a href="CompanyOverview.html">会社概要</a></li>
+              <li><a href="TearmsOfUse.html">ご利用規約</a></li>
+          </ul>
+          <ul>
+              <li><a href="PrivacyPolicy.html">プライバシーポリシー</a></li>
+              <li><a href="SpecifiedCommercialTransactionAct.html">特定商取引法に基づく表示</a></li>
+          </ul>
+        </nav>
+        <p>&copy; 2025 AibaAlbum</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AibaAlbum</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../stylesSubpage.css">
+    <link rel="stylesheet" href="../responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="../images/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="header-width">
+            <a class="header-navigation" href="../AibaAlbumDesign.html"><img src="../images/logo.png" alt="AibaAlbumDesign"></a>
+            <nav>
+                <ul class="main-navigation">
+                    <li><a href="../AibaAlbumDesign.html">&emsp;&emsp;ホーム&emsp;&emsp;</a></li><!--
+                    --><li><a href="AibaPromotion.html">&nbsp;キャンペーン&nbsp;</a></li><!--
+                    --><li><a href="AibaServicesFee.html">サービス・料金</a></li><!--
+                    --><li><a href="AibaContact.html">&nbsp;お問い合わせ&nbsp;</a></li>
+                </ul>
+            </nav>
+            <a class="application-btn" href="application.html">お申込み</a>
+        </div>
+        <div class="responsive-right">
+            <div class="responsive-box">
+                <button type="button" class="menu-btn">
+                        MENU
+                </button>
+                <nav class="menu-btn-child">
+                    <ul>
+                        <li><a class="child-nav" href="../AibaAlbumDesign.html">ホーム</a></li>
+                        <li><a class="child-nav" href="AibaPromotion.html">キャンペーン</a></li>
+                        <li><a class="child-nav" href="AibaServicesFee.html">サービス・料金</a></li>
+                        <li><a class="child-nav" href="AibaContact.html">お問い合わせ</a></li>
+                        <li><a class="button" href="application.html">お申込み</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="application-width">
+                <div class="application-title">
+                    <h1>お申込みフォーム</h1>
+                </div>
+        
+                <div class="application-intro">
+                    <h3>お申込前にご不明点はございませんか？お電話で相談可能です。</h3>
+                    <i class="fa-solid fa-phone fa-2x">0120-00-0000</i>
+                    <p>通話料無料／平日10:00〜17:00（土日祝休）</p>
+                </div>
+
+                <form id="application-form" action="http://localhost/AibaAlbum/aibaFee.php" method="post">
+                    <div class="deadline-plan">
+                        <div class="deadline-plan-title">
+                            納期プランをお選びください
+                        </div>
+                        <div class="deadline-plan-width">
+                            <div class="deadline-plan-hope">
+                                <span class="heads-up">必須</span><p>ご希望の納期プラン</p>
+                            </div>
+                            <div class="deadline-plan-type">
+                                <input type="hidden" name="plan" id="planInput" value="" required>
+                                <button type="button" id="deadline-plan-aiba" class="deadline-plan-aiba" name="deadline-plan-aiba" onclick="selectPlan('aiba')">
+                                    <table>
+                                        <caption>Aibaプラン</caption>
+                                        <tr>
+                                            <td>仕上がり</td>
+                                            <td>6ヶ月</td>
+                                        </tr>
+                                        <tr>
+                                            <td>写真データ化</td>
+                                            <td>〇受付可</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ビデオダビング</td>
+                                            <td>〇受付可</td>
+                                        </tr>
+                                        <tr>
+                                            <td>DVD変換</td>
+                                            <td>〇受付可</td>
+                                        </tr>
+                                    </table>
+                                </button>
+                                <button type="button" id="deadline-plan-hurry" class="deadline-plan-hurry" name="deadline-plan-hurry" onclick="selectPlan('hurry')">
+                                    <table>
+                                        <caption>お急ぎプラン</caption>
+                                        <tr>
+                                            <td>仕上がり</td>
+                                            <td>2ヶ月</td>
+                                        </tr>
+                                        <tr>
+                                            <td>写真データ化</td>
+                                            <td>〇受付可</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ビデオダビング</td>
+                                            <td>〇受付可</td>
+                                        </tr>
+                                        <tr>
+                                            <td>DVD変換</td>
+                                            <td>〇受付可</td>
+                                        </tr>
+                                    </table>
+                                </button>
+                            </div>
+                            <ul>
+                                <li>Aibaプランは、1万円以上から受付可能です。</li>
+                                <li>ご希望のスキャンコース、オプションはお写真発送時にご指定いただきます。</li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                    <div class="about-shipping-kit">
+                        <div class="about-shipping-title">
+                            発送キットについて入力してください
+                        </div>
+                        <div class="shipping-kit-width">
+                            <div class="sipping-promotion">
+                                <p>
+                                    ★送料無料キャンペーン実施中★<br>
+                                    ２万円以上のご利用で発送キットが無料！<br>
+                                    ※割引後の合計金額(送料・発送キットを除く)
+                                </p>
+                            </div>
+                            <img src="../images/shippingBox.gif" alt="発送キット">
+                            <div class="shipping-kit-question">
+                                <span class="heads-up">必須</span><p>発送キットは利用しますか？</p>
+                            </div>
+                            <div id="kit-select" class="shipping-kit-answer">
+                                    <input type="hidden" name="kitsSelect" id="kitsSelect" value="" required>
+                                    <button type="button" class="kit-use" name="kit-use" onclick="selectKits('use')">利用する</button>
+                                    <button type="button" class="kit-not-use" name="kit-not-use" onclick="selectKits('noUse')">利用しない</button>
+                            </div>
+                        </div>
+        
+                        <div class="shippingKitWidthBorder">
+                            <div class="shipping-kit-width">
+                                <div class="shipping-kit-question">
+                                    <span class="heads-up">必須</span><p>発送キットの数量</p>
+                                </div>
+                                <div id="shipping-kit-option">
+                                    <div class="shipping-select">
+                                        <p>大サイズ</p>
+                                        <select id="shipping-kit-option-big" name="shipping-kit-option-big" required>
+                                            <option value="" selected>選択してください</option>
+                                            <option value="不要">不要</option>
+                                            <option value="1箱">1箱</option>
+                                            <option value="2箱">2箱</option>
+                                            <option value="3箱">3箱</option>
+                                            <option value="4箱">4箱</option>
+                                            <option value="5箱">5箱</option>
+                                            <option value="6箱">6箱</option>
+                                            <option value="7箱">7箱</option>
+                                            <option value="8箱">8箱</option>
+                                            <option value="9箱">9箱</option>
+                                            <option value="10箱">10箱</option>
+                                        </select>
+                                    </div>
+                                    <div class="shipping-select">
+                                        <p>中サイズ</p>
+                                        <select id="shipping-kit-option-medium" name="shipping-kit-option-medium" required>
+                                            <option value="" selected>選択してください</option>
+                                            <option value="不要">不要</option>
+                                            <option value="1箱">1箱</option>
+                                            <option value="2箱">2箱</option>
+                                            <option value="3箱">3箱</option>
+                                            <option value="4箱">4箱</option>
+                                            <option value="5箱">5箱</option>
+                                            <option value="6箱">6箱</option>
+                                            <option value="7箱">7箱</option>
+                                            <option value="8箱">8箱</option>
+                                            <option value="9箱">9箱</option>
+                                            <option value="10箱">10箱</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="customer-information">
+                        <div class="customer-information-title">
+                            <p>お客様情報を入力してください</p>
+                        </div>
+                        <div id="customer-information" class="customer-information-width">
+                            <div class="customer-name">
+                                <div class="heads-up-flex">
+                                    <span class="heads-up">必須</span><p>お名前</p>
+                                </div>
+                                <div class="customer-grid">
+                                    <input type="text" name="last-name" id="last-name" placeholder="姓（例：相場）" required>
+                                    <input type="text" name="first-name" id="first-name" placeholder="名（例：太郎）" required>
+                                </div>
+                            </div>
+                            <div class="customer-name-furigana">
+                                <div class="heads-up-flex">
+                                    <span class="heads-up">必須</span><p>フリガナ</p>
+                                </div>
+                                <div class="customer-grid">
+                                    <input type="text" name="last-furigana" id="last-furigana" placeholder="セイ（例：アイバ）" required>
+                                    <input type="text" name="first-furigana" id="first-furigana" placeholder="メイ（例：タロウ）" required>
+                                </div>
+                            </div>
+                            <div class="customer-address">
+                                <div class="heads-up-flex">
+                                    <span class="heads-up">必須</span><p>住所</p>
+                                </div>
+                                <div class="post-code">
+                                    <span class="post-code-icon">〒</span>
+                                    <input type="text" name="post-code" id="post-code" placeholder="郵便番号（例：000-0000）" required>
+                                </div>
+                                <div class="customer-address-1">
+                                    <select name="prefecture" id="prefecture" required>
+                                        <option value="" selected>都道府県を選択</option>
+                                        <option value="北海道">北海道</option>
+                                        <option value="青森県">青森県</option>
+                                        <option value="岩手県">岩手県</option>
+                                        <option value="宮城県">宮城県</option>
+                                        <option value="秋田県">秋田県</option>
+                                        <option value="山形県">山形県</option>
+                                        <option value="福島県">福島県</option>
+                                        <option value="茨城県">茨城県</option>
+                                        <option value="栃木県">栃木県</option>
+                                        <option value="群馬県">群馬県</option>
+                                        <option value="埼玉県">埼玉県</option>
+                                        <option value="千葉県">千葉県</option>
+                                        <option value="東京都">東京都</option>
+                                        <option value="神奈川県">神奈川県</option>
+                                        <option value="新潟県">新潟県</option>
+                                        <option value="富山県">富山県</option>
+                                        <option value="石川県">石川県</option>
+                                        <option value="福井県">福井県</option>
+                                        <option value="山梨県">山梨県</option>
+                                        <option value="長野県">長野県</option>
+                                        <option value="岐阜県">岐阜県</option>
+                                        <option value="静岡県">静岡県</option>
+                                        <option value="愛知県">愛知県</option>
+                                        <option value="三重県">三重県</option>
+                                        <option value="滋賀県">滋賀県</option>
+                                        <option value="京都府">京都府</option>
+                                        <option value="大阪府">大阪府</option>
+                                        <option value="兵庫県">兵庫県</option>
+                                        <option value="奈良県">奈良県</option>
+                                        <option value="和歌山県">和歌山県</option>
+                                        <option value="鳥取県">鳥取県</option>
+                                        <option value="島根県">島根県</option>
+                                        <option value="岡山県">岡山県</option>
+                                        <option value="広島県">広島県</option>
+                                        <option value="山口県">山口県</option>
+                                        <option value="徳島県">徳島県</option>
+                                        <option value="香川県">香川県</option>
+                                        <option value="愛媛県">愛媛県</option>
+                                        <option value="高知県">高知県</option>
+                                        <option value="福岡県">福岡県</option>
+                                        <option value="佐賀県">佐賀県</option>
+                                        <option value="長崎県">長崎県</option>
+                                        <option value="熊本県">熊本県</option>
+                                        <option value="大分県">大分県</option>
+                                        <option value="宮崎県">宮崎県</option>
+                                        <option value="鹿児島県">鹿児島県</option>
+                                        <option value="沖縄県">沖縄県</option>
+                                    </select>
+                                    <input type="text" name="customer-address-2" id="customer-address-2" placeholder="市町村名（例：渋谷区渋谷）" required>
+                                </div>
+                                <input type="text" name="customer-address-3" id="customer-address-3" placeholder="番地、マンション・アパート名（例：0120 アイバアパート101）" required>
+                            </div>
+                            <div class="customer-telephoneNumber">
+                                <div class="heads-up-flex">
+                                    <span class="heads-up">必須</span><p>電話番号</p>
+                                </div>
+                                <input type="text" name="telephoneNumber" id="telephoneNumber" placeholder="電話番号（例：09000000000）" required>
+                            </div>
+                            <div class="customer-email">
+                                <div class="heads-up-flex">
+                                    <span class="heads-up">必須</span><p>メールアドレス</p>
+                                </div>
+                                <input type="email" name="customer-email" id="customer-email" placeholder="メールアドレス（例：example@aiba.com）" required>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="other-shipping">
+                        <div class="other-shipping-title">
+                            <p>発送キットのお届けについて入力してください</p>
+                        </div>
+                        <div id="other-shipping-check">
+                            <span class="heads-up-blue">任意</span>
+                            <input type="checkbox" value="different">上記とは違う住所にお届け希望
+                        </div>
+                    </div>
+        
+                    <div class="other-information">
+                        <div class="other-information-title">
+                            <p>その他の情報について入力してください</p>
+                        </div>
+                        <div class="other-information-heads">
+                            <span class="heads-up-blue">任意</span><p>クーポンコード</p>
+                        </div>
+                        <label id="other-information-coupon">
+                            <input type="text" id="information-coupon" name="information-coupon" placeholder="クーポンコードをお持ちの方はご入力ください">
+                        </label>
+                    </div>
+        
+                    <div class="privacyPolicy-check">
+                        <div class="privacyPolicy-check-title">
+                            <p>ご利用規約・プライバシーポリシーのご確認</p>
+                        </div>
+                        <div class="heads-up-flex customer-information-width">
+                            <span class="heads-up">必須</span>
+                            <p>以下をよくお読みになり「同意する」にチェックをしてください</p>
+                        </div>
+                        <textarea name="privacyPolicy-text" id="privacyPolicy-text" rows="18" readonly>
+ご利用規約
+
+第1条（総則）
+本規約は、AibaAlbumDesign（以下「当社」といいます）が提供する写真のデジタル化サービス（以下「本サービス」といいます）に関して、当社と利用者（以下「利用者」といいます）の間の権利義務関係を定めるものです。 利用者は、本規約に同意した上で本サービスを利用するものとします。
+
+第2条（サービスの内容）
+本サービスは、利用者が提供する写真をデジタルデータに変換するものです。 当社は、写真のデジタル化にあたり、可能な限り高品質なデジタルデータを提供することを約束しますが、完全な品質保証はいたしかねます。
+
+第3条（利用料金）
+本サービスの利用料金は、当社が定める料金表に基づきます。 利用者は、本サービスの利用に先立ち、当社が指定する方法で利用料金を支払うものとします。
+
+第4条（写真の取り扱い）
+利用者は、デジタル化を希望する写真を当社に送付する際、適切な梱包を行うものとします。 当社は、利用者から提供された写真を丁重に取り扱うものとしますが、輸送中の紛失や破損については一切責任を負いません。
+
+第5条（著作権）
+利用者は、デジタル化を希望する写真の著作権を保有しているか、または適切な許可を得ていることを保証するものとします。 デジタル化されたデータの著作権は、引き続き利用者に帰属します。
+
+第6条（禁止事項）
+利用者は、本サービスの利用に際して以下の行為を行ってはならないものとします。 違法行為または公序良俗に反する行為 他者の権利を侵害する行為
+
+第7条（免責事項）
+当社は、本サービスの利用により生じた損害について、一切の責任を負いません。 第8条（規約の変更） 当社は、必要に応じて本規約を変更することができるものとします。 規約の変更は、当社が適切と判断する方法で利用者に通知します。
+
+株式会社AibaAlbumDesign
+
+
+プライバシーポリシー
+
+1. 収集する情報
+私たちのアルバムデータ化サービス（以下「サービス」といいます）では、以下の情報を収集します。
+
+・ユーザーの連絡先情報（氏名、メールアドレス、電話番号など）
+・デジタルアルバムの画像およびメタデータ
+・サービス利用時に自動的に収集される技術情報（IPアドレス、ブラウザの種類、アクセス日時など）
+
+2. 情報の利用目的
+収集した情報は、以下の目的で利用します。
+
+・サービスの提供および改善
+・ユーザーサポートの提供
+・サービスの利用状況の分析
+・マーケティングおよびプロモーションのためのデータ活用
+
+3. 情報の共有
+私たちは、以下の場合を除いて、ユーザーの情報を第三者と共有しません。
+
+・ユーザーの同意がある場合
+・法律に基づき情報の開示が求められる場合
+・サービス提供に必要な場合（例：クラウドストレージプロバイダーへのデータ保存）
+
+4. 情報の保護
+私たちは、ユーザーの情報を保護するために適切なセキュリティ対策を講じます。情報の不正アクセス、紛失、破壊、改ざん、漏洩を防ぐために、技術的および組織的な対策を実施します。
+
+5. ユーザーの権利
+ユーザーは、自身の情報にアクセスし、修正し、削除を要求する権利があります。また、情報の処理に対する異議を申し立てる権利も有しています。これらの権利を行使する場合は、以下の連絡先までご連絡ください。
+
+6. プライバシーポリシーの変更
+本プライバシーポリシーは、必要に応じて変更されることがあります。変更後のポリシーは、当社のウェブサイト上に掲載し、その時点から効力を発生します。
+                
+株式会社AibaAlbumDesign
+                        </textarea>
+                        <p>
+                            <label id="privacyPolicy-checkbox">
+                                <input type="checkbox" value="textCheck" required>利用規約・プライバシーポリシーに同意する
+                            </label>
+                        </p>
+                    </div>
+                    <input id="application-form-submit" type="submit" value="確認画面に進む">
+                </form>
+            </div>
+        </div>
+    </main>
+        
+    <footer>
+        <nav class="footer-main-nav">
+            <ul>
+                <li><a href="AibaContact.html">お問い合わせ</a></li>
+                <li><a href="CompanyOverview.html">会社概要</a></li>
+                <li><a href="TearmsOfUse.html">ご利用規約</a></li>
+                <li><a href="PrivacyPolicy.html">プライバシーポリシー</a></li>
+                <li><a href="SpecifiedCommercialTransactionAct.html">特定商取引法に基づく表示</a></li>
+            </ul>
+        </nav>
+        <nav class="footer-responsive-nav">
+            <ul>
+                <li><a href="AibaContact.html">お問い合わせ</a></li>
+                <li><a href="CompanyOverview.html">会社概要</a></li>
+                <li><a href="TearmsOfUse.html">ご利用規約</a></li>
+            </ul>
+            <ul>
+                <li><a href="PrivacyPolicy.html">プライバシーポリシー</a></li>
+                <li><a href="SpecifiedCommercialTransactionAct.html">特定商取引法に基づく表示</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2025 AibaAlbum</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

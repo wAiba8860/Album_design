@@ -1,0 +1,1108 @@
+/******************************** 全体にかかる要素 ********************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 93.75%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+    background-color: #f8f7f6;
+}
+
+img {
+    height:auto;
+}
+
+/*********************** ヘッダー ************************/
+
+header {
+    background: linear-gradient(5deg, #3999e8 10%, #223670);
+    color: #fff;
+    padding: 2em 0;
+    position:fixed;
+    width:100%;
+    z-index: 10;
+}
+
+.header-width {
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.header-width img {
+    width: 9em;
+    position: absolute;
+    top:-2.5em;
+    left:2.0em;
+    transition: all 0.5s;
+}
+
+.header-width img:hover {
+    opacity:0.8;
+}
+
+.main-navigation {
+    list-style: none;
+    text-align: center;
+}
+
+.main-navigation li {
+    display: inline-block;
+}
+
+.main-navigation li a {
+    color: #fff;
+    font-size:1.5em;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 0.5em;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #fff;
+    padding: 1.9em 0.5em;
+}
+
+.main-navigation li a:hover {
+    transition: all 0.5s;
+    color: #5999e8;
+    background: #f8f7f6;
+    border-radius: 2em;
+    text-decoration-color: #f8f7f6;
+}
+
+/************ レスポンシブ時のナビゲーションボタン ***************/
+
+.responsive-right {
+    text-align: right;
+}
+
+.menu-btn {
+    font-size: 2.0em;
+    margin-right: 1em;
+    padding: 0.5em 1.0em;
+    border-radius: 3em;
+    border-color: #f8f7f6;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+}
+
+.menu-btn:hover {
+    background: #f8f7f6;
+    color: #223670;
+    transition: all 0.5s;
+}
+
+.menu-btn-child {
+    display: none;
+    padding: 10px;
+    background: none;
+}
+
+.menu-btn-child li {
+    text-align: center;
+    padding: 0.8em;
+    font-size: 3em;
+}
+
+.menu-btn-child li a {
+    color: #f8f7f6;
+}
+
+.child-nav:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.3em;
+}
+
+/******************************** グラデーションボタン ********************************/
+
+.application-btn {
+    font-size: 1.5em;
+    text-decoration: none;
+    display: inline-block;
+    background: linear-gradient(to top, #e6a8c5, #EBC3C3);
+    border: 2px solid #EBC3C3;
+    color: #f8f7f6;
+    border-radius: 0.5em;
+    padding: 0.4em 1em;
+    position: absolute;
+    top: -50%;
+    right: 2%;
+    overflow: hidden;
+    box-shadow:0 3px 0 #e6a8c5;
+}
+
+.application-btn:before{
+    position: absolute;
+    top: -200%;
+    left: -150%;
+    content: "";
+    height: 500%;
+    width: 80px;
+    background: linear-gradient(90deg, rgba(255,255,255,0),
+                                    rgba(255,255,255,0.6) 60%,
+                                    rgba(255,255,255,0),
+                                    rgba(255,255,255,0.6),
+                                    rgba(255,255,255,0));
+    transform: rotate(60deg);
+    animation: 2s gradient-animation-left infinite linear;
+}
+
+.application-btn:after{
+    z-index: -1;
+    position: absolute;
+    top: -250%;
+    left: -150%;
+    content: "";
+    height: 500%;
+    width: 80px;
+    background: linear-gradient(-90deg, rgba(255,255,255,0),
+                                    rgba(255,255,255,0.6) 80%,
+                                    rgba(255,255,255,0),
+                                    rgba(255,255,255,0.6),
+                                    rgba(255,255,255,0));
+    transform: rotate(-60deg);
+    animation: 2s gradient-animation-right infinite linear;
+}
+
+.application-btn:hover {
+    color: #e6a8c5;
+    background: linear-gradient(to top, #f8f7f6, #EBC3C3);
+    border: 2px solid #e6a8c5;
+    transition: all 0.5s;
+}
+
+.application-btn:hover {
+    box-shadow: none;
+    transform: translateY(3px);
+    transition: all 0.5s;
+}
+
+.application-btn:hover:before {
+    opacity: 0;
+}
+
+.application-btn:hover:after {
+    z-index: 1;
+}
+
+
+@keyframes gradient-animation-left{
+    0%{
+    left: -350%;
+    }
+    30%{
+    left:-150%
+    }
+    50%{
+    left:150%
+    }
+    100%{
+    left: 350%;
+    }
+}
+
+@keyframes gradient-animation-right{
+    0%{
+    left: 350%;
+    }
+    100%{
+    left: -200%;
+    }
+}
+
+/******************************** メイン要素　*******************************/
+
+main {
+    padding: 5.5em 0 2em 0;
+    margin:0 auto;
+    overflow: hidden;
+}
+
+.container {
+    margin:0 auto;
+}
+
+/********************** ファーストビュー **********************/
+
+.intro-text {
+    text-align: center;
+    color: #f8f7f6;
+    margin: 3em 0;
+    text-shadow: 2px 2px 2px rgb(211, 130, 168),
+                -2px -2px 2px rgb(211, 130, 168),
+                -2px 2px 2px rgb(211, 130, 168),
+                2px -2px 2px rgb(211, 130, 168);
+}
+
+.intro-text .color {
+    font-size: 1.8em;
+    color: #f3c8db;
+}
+
+.intro h1 {
+    font-family: serif;
+    display: inline-block;
+    font-size:3em;
+    text-align: center;
+    letter-spacing: 0.2em;
+    border-bottom: 2px solid rgb(18, 50, 110);
+}
+
+.intro p {
+    font-family: serif;
+    font-size:1.8em;
+    text-align: center;
+    margin-top: 0.5em;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+
+.firstview {
+    max-width: 100%;
+    height: 550px;
+    overflow: hidden;
+    position: relative;
+}
+
+.firstview img {
+    width: min(100vw,1920px);
+}
+
+.firstview img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    opacity: 0;
+    animation: firstview-img-switch 30s infinite linear 0.1s both, 
+            firstview-img-scaleUP 30s infinite linear 0.1s both;
+}
+
+.firstview-image2 img {
+    animation-delay: 10s;
+}
+
+.firstview-image3 img {
+    animation-delay: 20s;
+}
+
+@keyframes firstview-img-scaleUP {
+    0%  {transform: scale(1.0);}
+    100%{transform: scale(1.5);}
+}
+
+@keyframes firstview-img-switch {
+    0%{ opacity: 0;}
+    10%{ opacity: 0.8;}
+    20%{ opacity: 1.0;}
+    33%{ opacity: 0;}
+    100%{ opacity: 0;}
+}
+
+/******************** ファーストビュー下のアニメーション *********************/
+
+.firstview-animation {
+    overflow: hidden;
+}
+
+.firstview-animation ul{
+    list-style: none;
+    display: flex;
+    animation: firstview-left-animation 40s infinite linear 0.1s both;
+}
+
+.firstview-animation li img {
+    width: 100vw;
+}
+
+@keyframes firstview-left-animation {
+    from {
+        transform: translateX(0);
+        }
+    to  {
+        transform: translateX(-101%);
+        }
+}
+
+
+/******************************** セールバナー ********************************/
+.sale {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    padding: 10em 2em;
+}
+
+.sale img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+/******************************** お客様の声 ********************************/
+
+.customers-voice {
+    margin: 2em 0;
+}
+
+.voice img {
+    width :30%;
+    margin-right: 1em;
+}
+
+.flex-voice {
+    display: flex;
+    align-items: center;
+}
+
+.voice {
+    display: inline-block;
+    padding: 2em;
+    border: 3px solid #e6a8c5;
+    border-radius: 2em;
+}
+
+.voice p{
+    font-size: 1.8em;
+    margin-top: 1em;
+}
+
+.age{
+    padding-bottom:0.2em;
+}
+
+.customers-voice h2 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 2em;
+    letter-spacing: 0.2em;
+}
+
+.male {
+    font-size: 2em;
+    color:#223670;
+}
+
+.female {
+    font-size: 2em;
+    color:#e6a8c5;
+}
+
+.customer-voice {
+    display: grid;
+    gap: 5em;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    padding: 2em 2em;
+}
+
+/******************************** 企業の売り、サービス ********************************/
+
+.company-services h1{
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.scan-service-background {
+    padding: 10em 0;
+}
+
+.scan-services {
+    display: grid;
+    gap: 5em;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    padding: 5em 5em;
+}
+
+.scan-service-flex {
+    display: flex;
+    align-items: baseline;
+}
+
+.scan-services h2 {
+    font-size: 5em;
+    color: #e6a8c5;
+}
+
+.scan-service h3 {
+    font-size: 2.5em;
+}
+
+.scan-service p {
+    font-size: 2.0em;
+}
+
+.scan-service img {
+    width: 100%;
+    margin:2em 0;
+    border-radius: 2em;
+}
+
+.service {
+    margin-bottom: 1em;
+}
+
+/********************************* 中央の「さらに」 *********************************/
+
+.company-services .connection {
+    font-size: 3.0em;
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 2em;
+    background-color:#223670;
+    color:#fff;
+    margin: 0 auto;
+    
+}
+
+.connection-center {
+    text-align: center;
+}
+
+/******************************** aibastory ********************************/
+
+.aibastory-background {
+    padding: 10em 0;
+/*  background-color: rgba(153, 180, 229, 0.3);
+    margin:0 calc(50% - 49vw);
+    background-size: cover; */
+}
+
+
+.company-services .aibastory-title {
+    font-family:serif;
+    font-size:6em;
+    color:#223670;
+    margin:0.5em 0;
+}
+
+.aibastories {
+    width:min(100% , 1060px);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    margin: 7em auto;
+}
+
+.aibastory {
+    width: 90%;
+    background-color: #EBC3C3;
+    border-radius: 1em;
+    padding:2.5em;
+    box-shadow:0 0.5em #e6a8c5;
+    margin: 0 auto;
+}
+
+.aibastory img {
+    border-radius: 0.8em;
+    width: 100%;
+}
+
+.aibastory h2 {
+    margin-top: 1em;
+    font-size:2.5em;
+}
+
+.aibastory p {
+    margin-top:1em;
+    font-size:2.0em;
+}
+
+/******************************** 凹むボタン ********************************/
+
+.low-price a, .media-introduction-contents a {
+    text-align: center;
+    margin: 2em auto;
+    width: 50%;
+    font-size: 3em;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    background-color: #ebb2b2;
+    border: 2px solid #ebb2b2;
+    color: #f8f7f6;
+    border-radius: 0.5em;
+    padding: 0.5em 0;
+    box-shadow:0 0.2em #dda6a6;
+}
+
+.low-price a:hover, .media-introduction-contents a:hover,
+.promotion .btn a:hover {
+    transition: all 0.5s;
+    color:#e6a8c5;
+    background-color: #f8f7f6;
+    border: 2px solid #e6a8c5;
+    box-shadow:0 0.2em #EBC3C3;
+}
+
+.low-price a:hover,
+.media-introduction-contents a:hover , .promotion .btn a:hover {
+    transition: all 0.5s;
+    box-shadow: none;
+    transform : translateY(0.2em)
+}
+
+/******************************** 業界最安値 ********************************/
+
+.low-price-title {
+    font-size: 5vw;
+    text-align: center;
+    background-color: #223670;
+    padding:1em 0;
+    color: #ddd;
+    border-radius: 5em;
+    margin-bottom: 1em;
+}
+
+.price-comparison {
+    display: flex;
+    position: relative;
+}
+
+
+.price-comparison h2 {
+    font-size: 3em;
+    margin-bottom:2em;
+}
+
+.price-comparison p {
+    font-size: 1.2em;
+    position: absolute;
+    top: 1.7em;
+    left: 22.5em;
+}
+
+.emphasis {
+    display: flex;
+    position: relative;
+}
+/*
+.emphasis .ten {
+    font-size: 2em;
+    left: 22em;
+    top: 4em;
+    position: absolute;
+    text-align: right;
+}
+
+.emphasis .three {
+    font-size: 2em;
+    position: absolute;
+    left: 20.5em;
+    top: 4em;
+}
+
+.emphasis p {
+    font-size: 1.2em;
+    position: absolute;
+    top: 7.5em;
+    left: 40em;
+}
+*/
+.emphasis img {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.annotation p {
+    display: inline-block;
+    font-size: 1.2em;
+    color: #555;
+    text-align: left;
+}
+
+.annotation {
+    text-align: right;
+    margin-left: auto;
+    margin-bottom: 3em;
+}
+
+/******************************** 安い秘密 ********************************/
+
+#low-price {
+    margin: 0 auto;
+}
+
+.price-secret{
+    margin: 3em 0 2em 0;
+    font-size: 3em;
+}
+
+.secret-contents{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:3em;
+    text-align: left;
+    margin: 5em 0;
+    padding: 1em;
+}
+
+.secret-content img{
+    width: 100%;
+    border-radius: 2em;
+}
+
+.secret-content h3{
+    margin-top: 1em;
+    font-size: 2.0em;
+}
+
+.secret-content p{
+    margin-top:1em;
+    font-size: 1.5em;
+}
+
+
+/******************************** どっちがお得？ ********************************/
+
+.scaning h2 {
+    font-size: 3em;
+}
+
+.scaning p {
+    padding: 0 0.5em;
+    font-size: 2.5em;
+}
+
+.vs {
+    display: flex;
+    align-items: baseline;
+}
+
+.vs h2 {
+    color:#aaa;
+}
+
+.vs .vs-aiba {
+    color: #223670;
+}
+
+.pie-chart {
+    position: relative;
+}
+
+.pie-chart img {
+    width: 30%;
+    margin: 5em 0 0 15em;
+}
+
+.pie-chart p {
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-10%);
+}
+
+/******************************** 選んだ理由 ********************************/
+
+.reason-h2 {
+    margin-top: 3em;
+    font-size: 3em;
+    text-align: center;
+}
+
+.choose-reasons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:3em;
+    text-align: center;
+    margin: 5em 0;
+}
+
+.choose-reason {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.choose-reason img {
+    width: 100%;
+}
+
+.choose-reason p {
+    font-size: 2em;
+    background-color: #223670;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em 0 2em 0;
+    color: #f8f7f6;
+}
+
+/******************************** 解決します！ ********************************/
+
+.aiba-solution h2{
+    font-size: 3em;
+    text-align: center;
+    color:#e6a8c5;
+}
+
+.solutions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    margin: 5em auto;
+}
+
+.solution  img{
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
+    width: 50%;
+    border-radius: 50%;
+}
+
+.solution p {
+    font-size: 2em;
+}
+
+.solution {
+    position: relative;
+    border-radius: 50%;
+    border: 2px solid #e6a8c5;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    padding: 2em 4em;
+    box-sizing: border-box;
+}
+
+/******************************* 品質へのこだわり *******************************/
+
+.quality-title, .many-customers-text{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    background-color: #EBC3C3;
+    border-radius: 20em;
+    padding:3em 0;
+}
+
+.quality-title .background-text {
+    text-align: center;
+    font-size: 13VW;
+    white-space: nowrap;
+    color: #fff;
+}
+
+.background-text h1{
+    text-align: center;
+}
+
+.quality-title h1, .quality-title h2, .many-customers-text h1, .many-customers-text h3 {
+    position: absolute;
+    white-space: nowrap;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) ;
+}
+
+.quality-title h2 {
+    font-size: 3em;
+    transform: translate(-50%, -150%);
+}
+
+.quality-title h1 {
+    font-size: 5em;
+}
+
+.quality-comparison {
+    font-size: 3em;
+    margin: 1em 0;
+    text-align: center;
+}
+
+.quality-comparison img {
+    margin: 1em auto 0 auto;
+    padding: 0 2em;
+    width: min(99vw, 1080px);
+}
+
+.comparison-text {
+    display: inline-flex;
+    gap: 6em;
+    padding: 0 2em;
+    font-size: 0.75em;
+}
+
+.flex-center {
+    text-align: center;
+}
+
+#pursuing-quality {
+    margin-top: 10em;
+}
+
+.quality-comparison h3 {
+    text-align: center;
+}
+
+.pursuing-contents {
+    margin: 3em 0;
+}
+
+.pursuing {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 3em;
+}
+
+.pursuing h1 {
+    font-size: 7em;
+    border-bottom: 2px solid #223670;
+}
+
+.pursuing-content h2 {
+    font-size: 3em;
+    text-align: center;
+}
+
+.pursuing-content p {
+    font-size: 2em;
+    text-align: center;
+    margin: 1em 0 1em 0;
+}
+
+/****************************** 画像スクロール *********************************/
+
+@keyframes infinity-scroll-left {
+    from{
+        transform: translateX(-20%);
+        }
+    to{
+        transform: translateX(-120%);
+        }
+}
+
+@keyframes infinity-scroll-right {
+    from{
+        transform: translateX(-120%);
+        }
+    to{
+        transform: translateX(-20%);
+        }
+}
+
+.loop-img-left, .loop-img-right {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.loop-img-left .loop-img1, .loop-img-left .loop-img2, .loop-img-left .loop-img3 {
+    width: 100%;
+    animation: infinity-scroll-left 30s infinite linear 0.5s both;
+}
+
+.loop-img-right .loop-img1, .loop-img-right .loop-img2, .loop-img-right .loop-img3 {
+    width: 100%;
+    animation: infinity-scroll-right 30s infinite linear 0.5s both;
+}
+
+/***************************** お客様のデータを管理・保管 **************************/
+
+.pursuing-contents h2 {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.management-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+    text-align: center;
+}
+
+.managements-title p {
+    display: inline-block;
+    font-size: 2em;
+}
+
+.managements-title h3 {
+    font-size: 3em;
+}
+
+.management1 p, .management2 p, .management3 p {
+    font-size: 2.5em;
+    padding: 1em 0;
+    margin: 1em 0;
+}
+
+.management1 p {
+    border: 3px solid #e6a8c5;
+}
+.management2 p {
+    border: 3px solid #5999e8;
+}
+.management3 p {
+    border: 3px solid #EBC3C3;
+}
+
+/********************************* 吹き出し風下線 ******************************/
+
+.managements-title p {
+    position: relative;
+    padding: 0.4em;
+    margin-bottom: 0.7em;
+    border: 2px solid #223670; 
+    border-radius: 1em;
+}
+
+.managements-title p:before, .managements-title p:after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    content: "";
+    height: 0;
+    width: 0;
+}
+
+.managements-title p:before {
+    border: 12px solid;
+    border-color: transparent;
+    border-top-color: #223670;
+    margin-left: -12px;
+}
+
+.managements-title p:after {
+    border: 10px solid;
+    border-color: transparent;
+    border-top-color: #f8f7f6;
+    margin-left: -10px;
+}
+
+/***************************** 発送キット *******************************/
+
+.shipping-box {
+    display: inline-flex;
+    background-color: #EBC3C3;
+    width:80%;
+    text-align: left;
+    align-items: center;
+    padding: 3em;
+    margin: 2em 0;
+}
+
+.shipping-box img {
+    margin-right: 2em;
+    width: 25%;
+}
+
+.shipping-box h3 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+.shipping-box p {
+    font-size: 2em;
+}
+
+.shipping-box-h1{
+    font-size: 4em;
+    color: #e6a8c5;
+    padding:2em 0 2em 0;
+}
+
+/**************** backgroundtextは品質へのこだわり周辺にcss ***************/
+
+.many-customers-text .background-text {
+    font-size: 15vw;
+    white-space: nowrap;
+    color: #fff;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.many-customers-text h3 {
+    font-size: 3em;
+    transform: translate(-50%, -200%);
+}
+
+.many-customers-text h1 {
+    text-align: center;
+    font-size: 4em;
+    transform: translate(-50%, -30%);
+}
+
+/********************* たくさんのお客様にご利用いただいています ***************/
+
+.many-customers-image {
+    margin: 10em 0;
+}
+
+.many-customers-image img {
+    width: 100%;
+}
+
+/********************** メディアで紹介されました！ **************************/
+
+.media-introduction-contents h2 {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.media-introductions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+}
+
+.media-introduction img {
+    width: 100%;
+}
+
+.media-introduction p {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.media-introduction-contents .btn {
+    margin: 5em 0 8em 0;
+} 
+
+/************************ フッター ***************************/
+
+footer {
+    background: linear-gradient(5deg, #3999e8 , #223670 60%);
+    color: #fff;
+    text-align: center;
+    padding: 2em 0;
+}
+
+footer nav ul{
+    display:flex;
+    justify-content: center;
+    list-style: none;
+    gap:1em;
+}
+
+footer nav ul li a{
+    display:inline;
+    color:#ddd;
+    text-decoration: none;
+    transition: color 0.5s;
+    font-size: 1.25em;
+}
+
+footer nav ul li a:hover {
+    color: #5999e8;
+}
+
+footer p{
+    margin-top:1em;
+    font-size: 1em;
+}

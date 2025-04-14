@@ -1,0 +1,718 @@
+/**************** キャンペーンページ *****************/
+
+.banner {
+    margin: 5em auto 1em auto;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 3em;
+    margin-bottom: 1.5em;
+}
+
+.banner img {
+    width: 60%;
+}
+
+.promotion-text {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.promotion .btn {
+    text-align: center;
+}
+
+.promotion .btn a {
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #EBC3C3;
+    border: 2px solid #EBC3C3;
+    color: #f8f7f6;
+    border-radius: 0.5em;
+    padding: 0.5em 7em;
+    box-shadow:0 0.2em #e6a8c5;
+}
+
+.btn {
+    margin: 2em 0;
+}
+
+.promotion-width {
+    width: 50%;
+    margin:0 auto;
+}
+
+.promotion-content li {
+    list-style-position: inside
+}
+
+.promotion-content-title {
+    text-align: center;
+    margin: 4em 0;
+}
+
+.promotion-content-title h3 {
+    display: inline-block;
+    text-align: center;
+    font-size: 2em;
+    padding: 0.8em 7em;
+    color: #f8f7f6;
+    background-color: #223670;
+    border-radius: 2em;
+}
+
+.promotion-content {
+    font-size: 2em;
+}
+
+.promotion-Annotation {
+    margin: 1em 0;
+    font-size: 0.7em;
+    opacity:0.5;
+}
+
+.promotion-content .color {
+    color: #a81d1d;
+    font-weight: bold;
+}
+
+.promotion-content h3 {
+    margin-top: 1em;
+}
+
+.not-discount {
+    margin-bottom: 1em;
+}
+
+/********************* お申込みページ **********************/
+
+.application-width {
+    width: 70%;
+    text-align: center;
+    margin: 2em auto;
+}
+
+.application-title {
+    display: block;
+    text-align: left;
+    font-size: 3em;
+    border-bottom: 3px solid #223670;
+}
+
+.application-intro {
+    text-align: center;
+    border: #8a8a8a;
+    border-radius: 5px;
+    background-color: #ececec;
+    padding: 1em 0;
+    margin: 1em 0;
+}
+
+.application-intro h3 {
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.application-intro p {
+    font-size: 1em;
+    margin-top: 1em;
+    letter-spacing: 0.1em;
+}
+
+/***** 納期プランをお選びください *****/
+
+.deadline-plan, .about-shipping-kit, .privacyPolicy-check {
+    background-color: #ececec;
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 3em;
+}
+
+.shippingKitWidthBorder {
+    border-top: 1px solid #223670;
+    margin-top: 3em;
+}
+
+.deadline-plan-title, .about-shipping-title, .customer-information-title {
+    background-color: #223670;
+    color: #f8f7f6;
+    border-radius: 5px 5px 0 0;
+    font-size: 2em;
+    padding: 0.5em 0;
+}
+
+.deadline-plan-hope, .shipping-kit-question, .heads-up-flex, .other-information-heads {
+    display: flex;
+    font-size: 1.7em;
+    margin: 1em 0;
+    align-items: center;
+}
+
+.deadline-plan-width, .shipping-kit-width, .customer-information-width {
+    width: 90%;
+    margin:1em auto;
+}
+
+.heads-up {
+    background-color: #a81d1d;
+    color: #FFF;
+    padding: 0.3em 0.5em;
+    margin-right: 1em;
+}
+
+.deadline-plan-type, #kit-select, #shipping-kit-option, .customer-grid, .customer-address-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+.deadline-plan-type table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.deadline-plan-type caption {
+    font-size: 2em;
+    border-bottom: 1px solid #223670;
+    padding: 1em 0 0.5em 0;
+}
+
+.deadline-plan-type td {
+    font-size: 2.0em;
+    padding: 0.8em;
+    width: 400px;
+}
+
+.deadline-plan-type td:first-child {
+    text-align: right;
+}
+
+.deadline-plan-type td:last-child {
+    text-align: left;
+}
+
+.deadline-plan-aiba, .deadline-plan-hurry, .kit-use, .kit-not-use {
+    background-color: #f0f0f0;
+    border:3px solid #aaaaaa;
+    border-radius: 5px;
+    font-size: 1em;
+    padding:1em 0;
+    box-shadow: 0 4px #aaaaaa;
+    opacity: 0.5;
+}
+
+.deadline-plan-aiba:hover, .deadline-plan-hurry:hover,.kit-use:hover, .kit-not-use:hover {
+    transform: scale(1.05);
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+.plan-clicked {
+    background-color: #EBC3C3;
+    border:3px solid #e4a0c0;
+    border-radius: 5px;
+    font-size: 1em;
+    padding:1em 0;
+    box-shadow: 0 4px #e4a0c0;
+    opacity: 1.0;
+}
+
+.deadline-plan-width ul {
+    text-align: left;
+    list-style-position: inside;
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    padding: 1.5em 0 1.5em 1em;
+    background-color: #f8f7f6;
+}
+
+/****** 発送キットについて入力してください *****/
+
+.sipping-promotion {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #a81d1d;
+    border:1px solid #a81d1d;
+    margin: 1em 0;
+    padding: 1em 0;
+}
+
+.about-shipping-kit {
+    margin: 2em 0;
+}
+
+.about-shipping-kit img {
+    width: 30%;
+}
+
+.kit-use, .kit-not-use {
+    font-size: 2em;
+}
+
+#kit-select button {
+    padding: 1.5em 0;
+}
+
+.shipping-select select {
+    width: 100%;
+    margin-top:0.5em
+}
+
+.shipping-select {
+    font-size: 2.0em;
+}
+
+#shipping-kit-option-big, #shipping-kit-option-medium {
+    padding: 0.3em;
+}
+
+#shipping-kit-option-big:focus, #shipping-kit-option-medium:focus, #customer-information input:focus, #customer-information select:focus {
+    outline: none;
+    box-shadow: 0px 0px 3px #4d5f85;
+}
+
+.shipping-select p {
+    font-weight: bold;
+    text-align: left;
+}
+
+/****** お客様情報を入力してください ******/
+
+.customer-information {
+    background-color: #ececec;
+    padding-bottom: 3em;
+    border-radius: 5px;
+    margin-bottom: 2em;
+}
+
+.post-code {
+    width: 45%;
+    display: flex;
+    margin-bottom: 1em;
+    align-items: center;
+}
+
+.post-code-icon {
+    width:15%;
+    font-size: 2em;
+    background-color: #bebebe;
+    padding: 0.3em 0;
+}
+
+.customer-address-1 {
+    margin-bottom: 1em;
+}
+
+#customer-information input, #customer-information select {
+    width: 100%;
+    padding: 0.3em;
+    font-size: 2.0em;
+}
+
+#customer-information ::placeholder, #other-information-coupon ::placeholder {
+    opacity: 0.5;
+}
+
+/*** 発送キットのお届けについて入力してください ***/
+/*** その他の情報について入力してください ***/
+/*** ご利用規約・プライバシーポリシーのご確認 ***/
+
+.other-shipping, .other-information {
+    background-color: #ececec;
+    border-radius: 5px;
+    padding-bottom: 2em;
+}
+
+.other-shipping-title, .other-information-title, .privacyPolicy-check-title {
+    background-color: #4f67ad;
+    color: #f8f7f6;
+    border-radius: 5px 5px 0 0;
+    font-size: 2em;
+    padding: 0.5em 0;
+}
+
+#other-shipping-check, .other-information-heads {
+    width: 90%;
+    margin: 1.5em auto 0.5em;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+#application-form input[type=checkbox] {
+    transform: scale(1.3);
+}
+
+#application-form input[type=checkbox] {
+    margin-right: 1em;
+}
+
+.heads-up-blue {
+    background-color: #223670;
+    color: #FFF;
+    padding: 0.3em 0.5em;
+    margin-right: 1em;
+}
+
+.other-information, .privacyPolicy-check {
+    margin-top: 2em;
+    padding-bottom: 3em;
+}
+
+#other-information-coupon input {
+    width: 90%;
+    padding: 0.3em;
+    font-size: 1.5em;
+}
+
+#privacyPolicy-checkbox {
+    font-size: 1.5em;
+}
+
+.privacyPolicy-check textarea {
+    resize: none;
+    font-size: 1.5em;
+    width: 90%;
+    padding: 0.8em;
+    color: #696969;
+    margin-bottom: 2em;
+}
+
+#application-form-submit {
+    padding: 0.5em 0;
+    margin-top: 1.5em;
+    font-size: 2.5em;
+    letter-spacing: 0.5em;
+    border-radius: 3px;
+    width: 100%;
+    font-weight: bold;
+}
+
+/********************* お問い合わせ ***********************/
+
+.contact-keyvisual {
+    position: relative;
+    width: 100%;
+    height: 640px;
+    background-image: url("images/31517959_m.jpg");
+    background-size: cover;
+    background-position: right;
+}
+
+.contact-keyvisual-text {
+    display: inline-block;
+    text-align: center;
+    margin-top: 2em;
+    margin-left: 1em;
+    text-shadow: 2px 2px 4px #f8f7f6,
+    -2px -2px 4px #f8f7f6,
+    -2px 2px 4px #f8f7f6,
+    2px -2px 4px #f8f7f6;
+}
+
+.contact-keyvisual-text-bottom {
+    position: absolute;
+    bottom: 10%;
+    left: 2%;
+    font-weight: bold;
+    text-shadow: 2px 2px #f8f7f6,
+    -2px -2px 4px #f8f7f6,
+    -2px 2px 4px #f8f7f6,
+    2px -2px 4px #f8f7f6;
+}
+
+.down-arrow {
+    display: inline-block;
+    line-height: 1;
+    border:3px solid #000;
+    width: 2em;
+    height: 2em;
+    border-left: 0;
+    border-top: 0;
+    box-sizing: border-box;
+    transform: translateX(700%) translateY(-20%) rotate(45deg);
+}
+
+.contact-keyvisual h1 {
+    font-size: 4em;
+}
+
+.contact-keyvisual h2 {
+    font-size: 2em;
+    margin-top: 2em;
+}
+
+.contact-keyvisual p {
+    font-size: 1.7em;
+}
+
+.fa-solid {
+    margin: 1em 0 0.3em 0;
+    color: #000;
+    letter-spacing: 0.1em;
+}
+
+.contact form h2 {
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 1em;
+}
+
+.contact form {
+    padding: 2em;
+}
+
+.contact form label {
+    font-size: 1.5em;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.contact form #email {
+    margin-bottom: 1em;
+}
+
+.contact form p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.contact form #plan {
+    margin-bottom: 1em;
+}
+
+.contact form textarea {
+    resize: vertical;
+    margin-bottom: 3em
+}
+
+form .required-form {
+    color: #ff0000;
+    font-size: 1.3em;
+}
+
+.contact form input, .contact form textarea, .contact form select {
+    font-size: 1.5em;
+    width: 70%;
+    padding: 0.7em;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.contact form button, #application-form-submit, .menu-btn-child .button {
+    display: block;
+    border-radius: 3px;
+    background-color: #EBC3C3; 
+    border: 2px solid #EBC3C3;
+    color: #f8f7f6;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact form button {
+    width: 30%;
+    font-size: 1.5em;
+    padding: 0.8em;
+}
+
+.contact form button:hover, #application-form-submit:hover, .menu-btn-child .button:hover {
+    background-color: #f8f7f6;
+    color: #e6a8c5;
+    border:2px solid #e6a8c5;
+}
+
+/*** 受付メッセージ ****/
+
+#php-confirmation {
+    font-size: 1.8em;
+    padding: 3em;
+}
+
+.confirmation-message, .post-title {
+    font-weight: bold;
+}
+
+.post-title {
+    margin: 1em 0;
+}
+
+.confirmation-message, .post-email, .post-number, .post-plan, .post-type, .post-message {
+    margin-top: 1em;
+}
+
+/************** サービス・料金 *********************/
+
+.fee-visual {
+    font-size: 3em;
+    color: #f8f7f6;
+    background-image: url("images/25571214_s.jpg");
+    background-size: cover;
+    padding: 5em;
+    text-align: center;
+}
+
+.fee-visual h1 {
+    display: inline-block;
+    letter-spacing: 0.2em;
+    text-shadow: 2px 2px 2px rgb(211, 130, 168),
+                -2px -2px 2px rgb(211, 130, 168),
+                -2px 2px 2px rgb(211, 130, 168),
+                2px -2px 2px rgb(211, 130, 168);
+}
+
+.fee-banner {
+    text-align: center;
+    margin: 5em 0;
+}
+
+.fee-banner img {
+    width: 50%;
+}
+
+.fee-services {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.inline-box {
+    display:flex;
+    gap:2em;
+    justify-content: center;
+}
+
+.box {
+    display: block;
+    width: 30%;
+    font-size: 2.0em;
+    border: 3px solid #c4c4c4;
+    color: #c4c4c4;
+    padding: 2em;
+    margin: 1em 0;
+    border-radius: 2em;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.box h2 {
+    margin-bottom: 0.5em;
+}
+
+.box .text-left {
+    text-align: left;
+    margin-bottom: 0.5em;
+}
+
+.clicked {
+    border-color: #ff0000;
+    color: #000;
+    transition: all 0.5s;
+    opacity: 1.0;
+}
+
+#pricingTable {
+    margin-top: 3em;
+}
+
+.fee-services caption {
+    text-align: left;
+    margin-top: 2em;
+    margin-left: 1em;
+    font-size: 1.5em;
+    caption-side: top;
+    font-weight: bold;
+    color: #223670;
+}
+
+.fee-services h1 {
+    font-size: 3em;
+    margin-top: 2em;
+}
+
+.fee-services table {
+    border-collapse: collapse;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.fee-services table,.fee-services table th {
+    border-bottom: 1px solid #000000;
+}
+
+.fee-services td {
+    border-bottom: 1px dashed #bebebe;
+}
+
+.fee-services .border-none {
+    border-bottom: none;
+}
+
+.fee-services tr, .fee-services th, .fee-services td {
+    padding: 1.5em;
+    text-align: left;
+    font-size: 1em;
+}
+
+/*****************会社概要 ***********************/
+/******************** ご利用規約 ********************/
+/************* 特定商取引法に基づく表示 **************/
+/************* プライバシーポリシー ****************/
+
+.tearmsofuse , .privacyPolicy, .specifiedCommercial, .companyOverview{
+    font-size: 1.5em;
+    padding: 4em 1em;
+}
+
+.terms-title h1, .privacy-title h1, .specified-title, .overview-title {
+    display: inline-block;
+    font-size: 1.5em;
+    border-bottom: 3px solid #223670;
+}
+
+.terms-text, .privacy-text, .specified-text, .overview-text {
+    padding: 2em;
+    background-color: #d7e7fa;
+    margin:2em auto ;
+}
+
+.terms-text p, .privacy-text p, .specified-text p, .overview-text p {
+    padding: 0.2em 1.2em;
+}
+
+.overview-text ul, .privacy-text ul {
+    padding: 0.2em 1.2em;
+}
+
+.specified-text ul {
+    padding: 0.2em 2.4em;
+}
+
+.terms-text h2, .privacy-text h2, .specified-text h2 {
+    color: #223670;
+    margin-bottom: 1em;
+}
+
+.terms-company-name, .privacy-company-name, .specified-company-name {
+    text-align: right;
+}
+
+.specified-text a {
+    text-decoration: none;
+}
+
+.specified-text a:hover {
+    text-decoration: underline;
+}
+
+.privacy-text li .specified-text li {
+    list-style-position: inside
+}
+
+.overview-text li {
+    list-style: none;
+}

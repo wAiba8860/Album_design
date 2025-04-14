@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 367.7 367.7">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .14em;
+      }
+
+      .cls-2 {
+        letter-spacing: -.22em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.4em;
+      }
+
+      .cls-4 {
+        fill: #2e3192;
+      }
+
+      .cls-5, .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-7 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-8 {
+        fill: none;
+        stroke: #ccc;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-9 {
+        letter-spacing: -.08em;
+      }
+
+      .cls-10 {
+        letter-spacing: .29em;
+      }
+
+      .cls-11 {
+        letter-spacing: -.1em;
+      }
+
+      .cls-12 {
+        letter-spacing: .08em;
+      }
+
+      .cls-6 {
+        font-size: 47.29px;
+      }
+
+      .cls-6, .cls-13, .cls-14 {
+        font-family: KozMinPro-Regular-90ms-RKSJ-H, 'Kozuka Mincho Pro';
+      }
+
+      .cls-15 {
+        fill: #ccc;
+      }
+
+      .cls-13 {
+        font-size: 27px;
+        opacity: .99;
+      }
+
+      .cls-14 {
+        font-size: 21px;
+      }
+    </style>
+  </defs>
+  <g id="_レイヤー_1-2" data-name="レイヤー 1">
+    <g>
+      <g>
+        <g>
+          <path class="cls-15" d="M183.85,82.25c-56.12,0-101.61,45.49-101.61,101.6H.25C.25,82.46,82.45.25,183.85.25v82Z"/>
+          <path class="cls-5" d="M82.24,183.85c0-56.11,45.49-101.6,101.61-101.6s101.61,45.49,101.61,101.6-45.49,101.61-101.61,101.61-101.61-45.49-101.61-101.61Z"/>
+          <path class="cls-4" d="M82.24,183.85c0,56.12,45.49,101.61,101.61,101.61s101.61-45.49,101.61-101.61-45.49-101.6-101.61-101.6V.25c101.4,0,183.6,82.21,183.6,183.6s-82.2,183.6-183.6,183.6S.25,285.25.25,183.85h81.99Z"/>
+        </g>
+        <line class="cls-8" x1="183.85" y1=".25" x2="183.85" y2="82.25"/>
+      </g>
+      <text class="cls-13" transform="translate(126.8 167.3)"><tspan class="cls-10" x="0" y="0">Q</tspan><tspan class="cls-1" x="27.16" y="0">経</tspan><tspan class="cls-12" x="57.94" y="0">験</tspan><tspan x="87.1" y="0">は</tspan><tspan class="cls-11" x="-19.9" y="47.25">あり</tspan><tspan class="cls-7" x="28.7" y="47.25">ま</tspan><tspan x="55.16" y="47.25">す</tspan><tspan class="cls-9" x="82.16" y="47.25">か</tspan><tspan x="107" y="47.25">？</tspan></text>
+      <text class="cls-6" transform="translate(86.8 332.79)"><tspan x="0" y="0">はい</tspan><tspan class="cls-3" x="94.57" y="0"> </tspan><tspan x="88.8" y="0" xml:space="preserve"> 75%</tspan></text>
+      <text class="cls-14" transform="translate(44.41 85.42)"><tspan x="0" y="0">いいえ</tspan><tspan class="cls-2" x="63" y="0"> </tspan><tspan x="64.22" y="0">25%</tspan></text>
+    </g>
+  </g>
+</svg>

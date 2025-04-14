@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AibaAlbum</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../stylesSubpage.css">
+    <link rel="stylesheet" href="../responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="../images/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="header-width">
+            <a class="header-navigation" href="../AibaAlbumDesign.html"><img src="../images/logo.png" alt="AibaAlbumDesign"></a>
+            <nav>
+                <ul class="main-navigation">
+                    <li><a href="../AibaAlbumDesign.html">&emsp;&emsp;ホーム&emsp;&emsp;</a></li><!--
+                    --><li><a href="AibaPromotion.html">&nbsp;キャンペーン&nbsp;</a></li><!--
+                    --><li><a href="AibaServicesFee.html">サービス・料金</a></li><!--
+                    --><li><a href="AibaContact.html">&nbsp;お問い合わせ&nbsp;</a></li>
+                </ul>
+            </nav>
+            <a class="application-btn" href="application.html">お申込み</a>
+        </div>
+        <div class="responsive-right">
+            <div class="responsive-box">
+                <button type="button" class="menu-btn">
+                        MENU
+                </button>
+                <nav class="menu-btn-child">
+                    <ul>
+                        <li><a class="child-nav" href="../AibaAlbumDesign.html">ホーム</a></li>
+                        <li><a class="child-nav" href="AibaPromotion.html">キャンペーン</a></li>
+                        <li><a class="child-nav" href="AibaServicesFee.html">サービス・料金</a></li>
+                        <li><a class="child-nav" href="AibaContact.html">お問い合わせ</a></li>
+                        <li><a class="button" href="application.html">お申込み</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-keyvisual">
+                        <div class="contact-keyvisual-text">
+                            <h1>お問い合わせ</h1>
+                            <h2>お困りごとはありませんか？<br>お気軽にお問い合わせください</h2>
+                            <i class="fa-solid fa-phone fa-3x">0120-00-0000</i>
+                            <p>通話無料／平日10時～17時(土日祝除く)</p>
+                        </div>
+                        <div class="contact-keyvisual-text-bottom">
+                            <p>メールでのお問い合わせはこちらです</p>
+                            <span class="down-arrow"></span>
+                        </div>
+                </div>
+                <form id="contactForm" action="http://localhost/AibaAlbum/form.php" method="post">
+                    <h2>お問い合わせフォーム</h2>
+                    <label for="email">メールアドレス<span class="required-form">*</span></label>
+                    <input type="email" id="email" name="email">
+
+                    <label for="application-number">お申込み番号</label>
+                    <input type="text" id="application-number" name="application-number">
+                    <p>既にお申込みを頂いてるお客様はご記入ください</p>
+
+                    <label for="plan">お申し込み予定のプラン</label>
+                    <select id="plan" name="plan">
+                        <option value="">-</option>
+                        <option value="AibaPlan">Aibaプラン</option>
+                        <option value="HurryPlan">お急ぎプラン</option>
+                    </select>
+                    
+                    <label for="type">お問い合わせの種類<span class="required-form">*</span></label>
+                    <select id="type" name="type">
+                        <option value="">-</option>
+                        <option value="digitalization">デジタル化、原本について</option>
+                        <option value="deadline">納期について</option>
+                        <option value="data">データについて</option>
+                        <option value="shipping">発送について</option>
+                        <option value="support">お支払いについて</option>
+                        <option value="payment">料金について</option>
+                        <option value="other">その他</option>
+                    </select>
+                    <p>お問い合わせ内容を選択してください</p>
+                    
+                    <label for="message">お問い合わせ詳細<span class="required-form">*</span></label>
+                    <textarea id="message" name="message" rows="6"></textarea>
+                    
+                    <button type="button" onclick="submitForm()">送信</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav class="footer-main-nav">
+            <ul>
+                <li><a href="AibaContact.html">お問い合わせ</a></li>
+                <li><a href="CompanyOverview.html">会社概要</a></li>
+                <li><a href="TearmsOfUse.html">ご利用規約</a></li>
+                <li><a href="PrivacyPolicy.html">プライバシーポリシー</a></li>
+                <li><a href="SpecifiedCommercialTransactionAct.html">特定商取引法に基づく表示</a></li>
+            </ul>
+        </nav>
+        <nav class="footer-responsive-nav">
+            <ul>
+                <li><a href="AibaContact.html">お問い合わせ</a></li>
+                <li><a href="CompanyOverview.html">会社概要</a></li>
+                <li><a href="TearmsOfUse.html">ご利用規約</a></li>
+            </ul>
+            <ul>
+                <li><a href="PrivacyPolicy.html">プライバシーポリシー</a></li>
+                <li><a href="SpecifiedCommercialTransactionAct.html">特定商取引法に基づく表示</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2025 AibaAlbum</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
