@@ -1,98 +1,159 @@
 <!DOCTYPE html>
 <html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AibaAlbum</title>
+        <link rel="stylesheet" href="../styles.css" />
+        <link rel="stylesheet" href="../stylesSubpage.css" />
+        <link rel="stylesheet" href="../responsive.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <link rel="shortcut icon" href="../images/favicon.png" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AibaAlbum</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../stylesSubpage.css">
-    <link rel="stylesheet" href="../responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="shortcut icon" href="../images/favicon.png">
-</head>
-
-<body>
-  <header>
-    <div class="header-width">
-      <a class="header-navigation" href="../AibaAlbumDesign.html"><img src="../images/logo.png" alt="AibaAlbumDesign"></a>
-        <nav>
-            <ul class="main-navigation">
-                <li><a href="../AibaAlbumDesign.html">&emsp;&emsp;ホーム&emsp;&emsp;</a></li><!--
-                --><li><a href="AibaPromotion.html">&nbsp;キャンペーン&nbsp;</a></li><!--
-                --><li><a href="AibaServicesFee.html">サービス・料金</a></li><!--
-                --><li><a href="AibaContact.html">&nbsp;お問い合わせ&nbsp;</a></li>
-            </ul>
-        </nav>
-        <a class="application-btn" href="application.html">お申込み</a>
-    </div>
-    <div class="responsive-right">
-        <div class="responsive-box">
-            <button type="button" class="menu-btn">
-                    MENU
-            </button>
-            <nav class="menu-btn-child">
-                <ul>
-                    <li><a class="child-nav" href="../AibaAlbumDesign.html">ホーム</a></li>
-                    <li><a class="child-nav" href="AibaPromotion.html">キャンペーン</a></li>
-                    <li><a class="child-nav" href="AibaServicesFee.html">サービス・料金</a></li>
-                    <li><a class="child-nav" href="AibaContact.html">お問い合わせ</a></li>
-                    <li><a class="button" href="application.html">お申込み</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
-    <main>
-        <section id="services" class="services">
-            <div class="fee-visual">
-                <h1>写真やフィルムをデータ化<br>DVDにまとめてお届け</h1>
+    <body>
+        <header>
+            <div class="header-width">
+                <a class="header-navigation" href="../index.html"
+                    ><img src="../images/logo.png" alt="AibaAlbumDesign"
+                /></a>
+                <nav>
+                    <ul class="main-navigation">
+                        <li>
+                            <a href="../index.html"
+                                >&emsp;&emsp;ホーム&emsp;&emsp;</a
+                            >
+                        </li>
+                        <!--
+                -->
+                        <li>
+                            <a href="AibaPromotion.html"
+                                >&nbsp;キャンペーン&nbsp;</a
+                            >
+                        </li>
+                        <!--
+                -->
+                        <li>
+                            <a href="AibaServicesFee.html">サービス・料金</a>
+                        </li>
+                        <!--
+                -->
+                        <li>
+                            <a href="AibaContact.html"
+                                >&nbsp;お問い合わせ&nbsp;</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+                <a class="application-btn" href="application.html">お申込み</a>
             </div>
-          <div class="container">
-            <div class="fee-banner">
-              <a href="AibaPromotion.html"><img src="../images/salebanner.jpg" alt="バナー"></a>
+            <div class="responsive-right">
+                <div class="responsive-box">
+                    <button type="button" class="menu-btn">MENU</button>
+                    <nav class="menu-btn-child">
+                        <ul>
+                            <li>
+                                <a class="child-nav" href="../index.html"
+                                    >ホーム</a
+                                >
+                            </li>
+                            <li>
+                                <a class="child-nav" href="AibaPromotion.html"
+                                    >キャンペーン</a
+                                >
+                            </li>
+                            <li>
+                                <a class="child-nav" href="AibaServicesFee.html"
+                                    >サービス・料金</a
+                                >
+                            </li>
+                            <li>
+                                <a class="child-nav" href="AibaContact.html"
+                                    >お問い合わせ</a
+                                >
+                            </li>
+                            <li>
+                                <a class="button" href="application.html"
+                                    >お申込み</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-
-            <div class="fee-services">
-                <div class="fee-services-title">
-                    <h1>料金表</h1>
+        </header>
+        <main>
+            <section id="services" class="services">
+                <div class="fee-visual">
+                    <h1>写真やフィルムをデータ化<br />DVDにまとめてお届け</h1>
                 </div>
-  
+                <div class="container">
+                    <div class="fee-banner">
+                        <a href="AibaPromotion.html"
+                            ><img src="../images/salebanner.jpg" alt="バナー"
+                        /></a>
+                    </div>
 
-                <div class="inline-box">
-                  <div class="box clicked" onclick="showPricing(this, 'aiba')">
-                      <h2>Aibaプラン</h2>
-                      <div class="text-left"><p>平均でお急ぎプランの3割程お安くデータ化いただけます</p></div>
-                      <p>納期: 6ヶ月</p>
-                  </div>
-                  <div class="box" onclick="showPricing(this, 'urgent')">
-                      <h2>お急ぎプラン</h2>
-                      <div class="text-left"><p>料金は少し高くなりますが納期が大幅に短縮されます</p></div>
-                      <p>納期: 2ヶ月</p>
-                  </div>
-                </div>
-                <div id="pricingTable"></div>
-                <script>
+                    <div class="fee-services">
+                        <div class="fee-services-title">
+                            <h1>料金表</h1>
+                        </div>
 
-                // 初期段階でAibaプランの料金表を表示する関数
-                document.addEventListener("DOMContentLoaded", function() {
-                        var aibaBox = document.querySelector('.box.clicked');
-                        showPricing(aibaBox, 'aiba');
-                    });
-                  
-                function showPricing(element, plan) {
+                        <div class="inline-box">
+                            <div
+                                class="box clicked"
+                                onclick="showPricing(this, 'aiba')"
+                            >
+                                <h2>Aibaプラン</h2>
+                                <div class="text-left">
+                                    <p>
+                                        平均でお急ぎプランの3割程お安くデータ化いただけます
+                                    </p>
+                                </div>
+                                <p>納期: 6ヶ月</p>
+                            </div>
+                            <div
+                                class="box"
+                                onclick="showPricing(this, 'urgent')"
+                            >
+                                <h2>お急ぎプラン</h2>
+                                <div class="text-left">
+                                    <p>
+                                        料金は少し高くなりますが納期が大幅に短縮されます
+                                    </p>
+                                </div>
+                                <p>納期: 2ヶ月</p>
+                            </div>
+                        </div>
+                        <div id="pricingTable"></div>
+                        <script>
+                            // 初期段階でAibaプランの料金表を表示する関数
+                            document.addEventListener(
+                                "DOMContentLoaded",
+                                function () {
+                                    var aibaBox =
+                                        document.querySelector(".box.clicked");
+                                    showPricing(aibaBox, "aiba");
+                                }
+                            );
 
-                       // すべてのボックスのクリック状態をリセット
-                    var boxes = document.getElementsByClassName('box');
-                    for (var i = 0; i < boxes.length; i++) {
-                        boxes[i].classList.remove('clicked');
-                        }
+                            function showPricing(element, plan) {
+                                // すべてのボックスのクリック状態をリセット
+                                var boxes =
+                                    document.getElementsByClassName("box");
+                                for (var i = 0; i < boxes.length; i++) {
+                                    boxes[i].classList.remove("clicked");
+                                }
 
-                      // クリックされたボックスの枠の色を変更
-                    element.classList.add('clicked');
-                    var pricingTable = document.getElementById('pricingTable');
-                    if (plan === 'aiba') {
-                        pricingTable.innerHTML = `
+                                // クリックされたボックスの枠の色を変更
+                                element.classList.add("clicked");
+                                var pricingTable =
+                                    document.getElementById("pricingTable");
+                                if (plan === "aiba") {
+                                    pricingTable.innerHTML = `
                                 
                               <table>
                                 <caption>一般的な写真やフィルム</caption>
@@ -276,8 +337,8 @@
                               </table>
 
                             `;
-                        } else if (plan === 'urgent') {
-                            pricingTable.innerHTML = `
+                                } else if (plan === "urgent") {
+                                    pricingTable.innerHTML = `
                                 
                               <table>
                                 <caption>一般的な写真やフィルム</caption>
@@ -461,38 +522,49 @@
                               </table>
 
                             `;
-                        }
-                    }
-              </script>
-
-            </div>
-          </div>
-        </section>
-    </main>
-    <footer>
-        <nav class="footer-main-nav">
-            <ul>
-                <li><a href="AibaContact.html">お問い合わせ</a></li>
-                <li><a href="CompanyOverview.html">会社概要</a></li>
-                <li><a href="TearmsOfUse.html">ご利用規約</a></li>
-                <li><a href="PrivacyPolicy.html">プライバシーポリシー</a></li>
-                <li><a href="SpecifiedCommercialTransactionAct.html">特定商取引法に基づく表示</a></li>
-            </ul>
-        </nav>
-        <nav class="footer-responsive-nav">
-          <ul>
-              <li><a href="AibaContact.html">お問い合わせ</a></li>
-              <li><a href="CompanyOverview.html">会社概要</a></li>
-              <li><a href="TearmsOfUse.html">ご利用規約</a></li>
-          </ul>
-          <ul>
-              <li><a href="PrivacyPolicy.html">プライバシーポリシー</a></li>
-              <li><a href="SpecifiedCommercialTransactionAct.html">特定商取引法に基づく表示</a></li>
-          </ul>
-        </nav>
-        <p>&copy; 2025 AibaAlbum</p>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../js/script.js"></script>
-</body>
+                                }
+                            }
+                        </script>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <nav class="footer-main-nav">
+                <ul>
+                    <li><a href="AibaContact.html">お問い合わせ</a></li>
+                    <li><a href="CompanyOverview.html">会社概要</a></li>
+                    <li><a href="TearmsOfUse.html">ご利用規約</a></li>
+                    <li>
+                        <a href="PrivacyPolicy.html">プライバシーポリシー</a>
+                    </li>
+                    <li>
+                        <a href="SpecifiedCommercialTransactionAct.html"
+                            >特定商取引法に基づく表示</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+            <nav class="footer-responsive-nav">
+                <ul>
+                    <li><a href="AibaContact.html">お問い合わせ</a></li>
+                    <li><a href="CompanyOverview.html">会社概要</a></li>
+                    <li><a href="TearmsOfUse.html">ご利用規約</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="PrivacyPolicy.html">プライバシーポリシー</a>
+                    </li>
+                    <li>
+                        <a href="SpecifiedCommercialTransactionAct.html"
+                            >特定商取引法に基づく表示</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+            <p>&copy; 2025 AibaAlbum</p>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../js/script.js"></script>
+    </body>
 </html>
